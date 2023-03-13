@@ -59,7 +59,7 @@ Public Class loginForm
                 'gisAdmin = reader.GetValue(5)
                 gusertype = reader.GetValue(5)
 
-                MessageBox.Show(gusertype)
+                'MessageBox.Show(gusertype)
 
                 Me.Hide()
                 mainDashboard.Show()
@@ -72,5 +72,16 @@ Public Class loginForm
 
         End If
 
+    End Sub
+
+    Private Sub loginForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        usernameTB.Clear()
+        passwordTB.Clear()
+
+    End Sub
+
+    Private Sub loginForm_Enter(sender As Object, e As EventArgs) Handles MyBase.Enter
+        usernameTB.Clear()
+        passwordTB.Clear()
     End Sub
 End Class
